@@ -87,11 +87,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.nav {
+nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
-  z-index: 100; /* Adjusted z-index */
+  z-index: 9;
 }
 
 .nav__header {
@@ -336,7 +336,6 @@ body {
 .swiper {
   padding-bottom: 3rem;
   width: 100%;
-  z-index: 1; /* Adjusted z-index */
 }
 
 .swiper-pagination-bullet-active {
@@ -387,7 +386,7 @@ body {
   text-align: center;
 }
 
-@media (min-width: 540px) {
+@media (width > 540px) {
   .special__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -401,7 +400,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (width > 768px) {
   nav {
     position: static;
     padding: 2rem 1rem;
@@ -496,7 +495,7 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (width > 1024px) {
   .special__grid {
     gap: 2rem;
   }
@@ -509,4 +508,6 @@ body {
   .banner__container {
     gap: 2rem;
   }
+
 }
+
