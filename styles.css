@@ -87,11 +87,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
+.nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
-  z-index: 9;
+  z-index: 100; /* Adjusted z-index */
 }
 
 .nav__header {
@@ -336,6 +336,7 @@ nav {
 .swiper {
   padding-bottom: 3rem;
   width: 100%;
+  z-index: 1; /* Adjusted z-index */
 }
 
 .swiper-pagination-bullet-active {
