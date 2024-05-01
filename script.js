@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     orderForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const selectedCuisine = dropdownToggle.querySelector("span").textContent.trim();
-        if (!selectedCuisine || selectedCuisine === "Select Cuisine") {
+        if (!selectedCuisine || selectedCuisine === "Pick Category") {
             alert("Please select a cuisine.");
             return;
         }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cancelBtn.addEventListener("click", function () {
         orderForm.reset();
-        dropdownToggle.querySelector("span").textContent = "Select Cuisine";
+        dropdownToggle.querySelector("span").textContent = "Pick Category";
         alert("Order canceled!");
     });
 

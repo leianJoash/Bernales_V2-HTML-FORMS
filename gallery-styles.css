@@ -308,3 +308,45 @@ header a:hover {
 .checkout-btn, .clear-btn {
     margin: 0 10px; /* Add some horizontal margin between buttons */
 }
+
+.menu {
+    text-align: center; /* Center-align the menu */
+}
+
+.menu > h3 {
+    font-family: "Lobster"; /* Apply modern font */
+    color: #333; /* Set text color */
+    font-size: 34px; /* Increase font size */
+}
+
+.menu .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    margin-top: 20px; /* Add margin to separate categories */
+}
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media only screen and (max-width: 768px) {
+    .category {
+        padding: 10px; /* Adjust padding */
+    }
+    
+    .items {
+        flex-direction: column; /* Stack items vertically */
+    }
+    
+    .item {
+        width: calc(50% - 20px); /* Adjust item width */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+}
+
+/* For screens smaller than 480px (e.g., small smartphones) */
+@media only screen and (max-width: 480px) {
+    .item {
+        width: 100%; /* Full width for items */
+    }
+}
+
+/* Additional adjustments as needed */
