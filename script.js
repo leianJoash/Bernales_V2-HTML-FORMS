@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function createRainDrop() {
         const rainDrop = document.createElement("img");
-        const randomImage = Math.random() < 0.5 ? "burger.png" : "fries.png"; // Randomly choose between burger and fries
+        const randomImage = Math.random() < 0.5 ? "assets/burger.png" : "assets/fries.png"; // Randomly choose between burger and fries
         rainDrop.src = randomImage;
         rainDrop.classList.add("rain");
         document.body.appendChild(rainDrop);

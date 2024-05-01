@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: #fcfcf7;
+    background-image: url('assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #1f1f09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+li,
+a {
+    all: unset;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .flavorfusion {
+    font-size: 38px;
+    font-weight: bold;
+  }
+  .flavor {
+    color: orange;
+  }
+  .fusion {
+    color: black;
+  }
+
+#dropdown {
+    --border-radius: 6px;
+    --shadow-color: 60deg 13% 61%;
+    max-width: 220px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.dropdown-toggle,
+.menu-item,
+.submenu-item {
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.menu-item:first-child {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.menu-item:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.menu-item:hover {
+    background-color: #faf6ea;
+}
+
+.dropdown-toggle,
+.submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-toggle>span {
+    color: #000000;
+}
+
+i {
+    color: #db8400;
+    transition: 0.25s ease;
+}
+
+.dropdown-toggle.open>i {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.menu,
+.submenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    width: 100%;
+    transform: translateY(-12px);
+}
+
+.menu.open,
+.submenu.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(12px);
+}
+
+.submenu {
+    width: max-content;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-12px);
+}
+
+.menu-item:hover>.submenu,
+.submenu-item:hover>.submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(8px);
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #878787;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.restaurant-info {
+    text-align: center;
+}
+
+.restaurant-info h1 {
+    font-size: 24px;
+}
+
+.tagline {
+    font-size: 14px;
+    font-style: italic;
+    color: #7b7b6e;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+}
+
+/* Button Styles */
+.order-btn {
+    background-color: green;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+}
+
+.order-btn:hover {
+    background-color: #007000;
+}
+
+.cancel-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Add hover effect for submenu items */
+.submenu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.rain {
+    position: fixed;
+    width: 50px;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+    .menu-item,
+    .submenu-item {
+        padding: 10px 15px;
+    }
+    .dropdown-toggle>span {
+        font-size: 16px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .restaurant-info h1 {
+        font-size: 20px;
+    }
+    .tagline {
+        font-size: 12px;
+    }
+    .main-content {
+        padding: 10px;
+    }
+}
