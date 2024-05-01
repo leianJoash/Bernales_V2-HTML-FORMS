@@ -381,25 +381,37 @@ header a:hover {
 
 /* For screens smaller than 480px (e.g., small smartphones) */
 @media only screen and (max-width: 480px) {
+    .category {
+        padding: 10px; /* Adjust padding */
+    }
+
     .items {
+        flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
 
     .item {
-        width: 100%; /* Full width for items */
+        position: relative; /* Position relative for the button */
+        width: calc(50% - 20px); /* Adjust item width */
+        margin-bottom: 20px; /* Adjust margin */
+        box-sizing: border-box; /* Ensure padding and border are included in width */
+        padding: 10px; /* Add padding */
     }
 
     /* Adjust width and padding for the add to cart button */
     .item .order {
+        position: absolute; /* Position the button absolutely */
+        bottom: 10px; /* Adjust button position */
+        right: 55px; /* Adjust button position */
         width: 50%; /* Adjust button width */
-        margin-top: 10px; /* Add margin */
-        font-size: 10px; /* Adjust button font size */
-        padding: 3px 8px; /* Adjust button padding */
+        font-size: 12px; /* Adjust button font size */
+        height: 40px;
+        padding: 5px 10px; /* Adjust button padding */
     }
 
-    /* Further reduce image size */
+    /* Reduce image size */
     .item img {
-        width: 100%; /* Make images fill 100% of their containers */
+        width: 70%; /* Make images fill their containers */
         height: auto; /* Maintain aspect ratio */
     }
 

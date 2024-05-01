@@ -511,3 +511,24 @@ nav {
 
 }
 
+.footer__links {
+  display: inline-flex; /* Use inline-flex to keep the items on the same line */
+  align-items: center; /* Align items vertically */
+}
+
+.footer__links li {
+  margin-right: 10px; /* Add some spacing between logos */
+}
+
+.footer__links li:last-child {
+  margin-right: 0; /* Remove margin for the last logo */
+}
+
+.footer__links li img {
+  width: 30px; /* Adjust the width of the logos */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
