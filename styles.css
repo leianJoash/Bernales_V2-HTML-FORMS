@@ -89,10 +89,10 @@ body {
 
 nav {
   position: fixed;
-  isolation: isolate;
   width: 100%;
-  z-index: 9;
+  z-index: 1000; /* Adjusted z-index value */
 }
+
 
 .nav__header {
   width: 100%;
@@ -510,3 +510,4 @@ nav {
   }
 
 }
+
